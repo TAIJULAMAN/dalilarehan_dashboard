@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.children-menu {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+select option {
+  color: #a19c00 !important;
+  padding: 10px;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hover effect for buttons */
+
+/* In your CSS file or inside a styled-components if you're using them */
+/* .no-border-radius-modal .ant-modal {
+  border-radius: 0 !important;
+}
+
+:where(.css-dev-only-do-not-override-49qm).ant-checkbox-checked
+  .ant-checkbox-inner {
+  background-color: #000000;
+  border-color: #000000;
+} */
+
+/* :where(.css-dev-only-do-not-override-49qm).ant-tabs
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn {
+  color: #ff3916;
+}
+
+.custom-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: red !important;
+}
+
+.custom-tabs .ant-tabs-ink-bar {
+  background-color: red !important;
+}
+
+.custom-tabs .ant-tabs-tab:hover {
+  color: inherit !important;
+}
+
+.custom-tabs .ant-tabs-tab-btn:hover {
+  color: inherit !important;
+}
+
+.custom-tabs .ant-tabs-tab {
+  border-bottom: none !important;
+}
+
+.custom-tabs .ant-tabs-tab-active {
+  border-bottom: 2px solid red !important;
+} */
+
+/* iPad-specific utilities */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Better touch interactions for iPad */
+@media (max-width: 1024px) {
+  /* Ensure minimum touch target sizes for iPad */
+  button, a, input[type="checkbox"], .cursor-pointer {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better table responsiveness for iPad */
+  .ipad-table .ant-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .ipad-users-table .ant-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Smooth scrolling for better iPad experience */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Better modal positioning for iPad */
+  .ant-modal {
+    margin: 0 auto;
+    max-width: 90vw !important;
+  }
+  
+  /* Prevent zoom on input focus for iPad */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* iPad Portrait specific styles */
+@media (max-width: 768px) and (orientation: portrait) {
+  .ipad-portrait-adjust {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* iPad Landscape specific styles */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  .ipad-landscape-spacing {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Custom scrollbar for desktop, hidden for mobile/iPad */
+@media (min-width: 1367px) {
+  *::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+}
